@@ -1,0 +1,19 @@
+services:
+  agent:
+    build: .
+    env_file:
+      - path: .env
+        required: false
+    command: ["给我生成一份关于 Pilbara 锂矿的今日简报"]
+
+  mining-news-mcp:
+    build: .
+    entrypoint: ["mining-news-mcp"]
+
+  mineral-pdf-mcp:
+    build: .
+    entrypoint: ["mineral-pdf-mcp"]
+
+  lme-price-mcp:
+    build: .
+    entrypoint: ["lme-price-mcp"]

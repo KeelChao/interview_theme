@@ -1,0 +1,50 @@
+[
+  {
+    "commodity": "lithium",
+    "date": "2026-06-25",
+    "price": 8200,
+    "unit": "USD/t spodumene concentrate 6%",
+    "source": "Shanghai Metals Market fixture",
+    "source_url": "https://www.metal.com/fixture/lithium-spodumene"
+  },
+  {
+    "commodity": "lithium",
+    "date": "2026-07-01",
+    "price": 8520,
+    "unit": "USD/t spodumene concentrate 6%",
+    "source": "Shanghai Metals Market fixture",
+    "source_url": "https://www.metal.com/fixture/lithium-spodumene"
+  },
+  {
+    "commodity": "copper",
+    "date": "2026-06-25",
+    "price": 9480,
+    "unit": "USD/t LME cash",
+    "source": "LME fixture",
+    "source_url": "https://www.lme.com/fixture/copper"
+  },
+  {
+    "commodity": "copper",
+    "date": "2026-07-01",
+    "price": 9715,
+    "unit": "USD/t LME cash",
+    "source": "LME fixture",
+    "source_url": "https://www.lme.com/fixture/copper"
+  },
+  {
+    "commodity": "nickel",
+    "date": "2026-06-25",
+    "price": 15350,
+    "unit": "USD/t LME cash",
+    "source": "LME fixture",
+    "source_url": "https://www.lme.com/fixture/nickel"
+  },
+  {
+    "commodity": "nickel",
+    "date": "2026-07-01",
+    "price": 15110,
+    "unit": "USD/t LME cash",
+    "source": "LME fixture",
+    "source_url": "https://www.lme.com/fixture/nickel"
+  }
+]
