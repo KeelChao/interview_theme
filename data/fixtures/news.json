@@ -1,0 +1,34 @@
+[
+  {
+    "title": "Pilbara Minerals reports steady spodumene shipments from Pilgangoora",
+    "published_at": "2026-07-01",
+    "source": "Mining.com fixture",
+    "url": "https://www.mining.com/fixture/pilbara-minerals-shipments",
+    "summary": "Pilbara Minerals said Pilgangoora shipments remained stable while customers continued to negotiate shorter offtake windows.",
+    "tags": ["pilbara", "lithium", "spodumene", "shipments"]
+  },
+  {
+    "title": "Australia updates critical minerals financing priorities",
+    "published_at": "2026-06-30",
+    "source": "DISR fixture",
+    "url": "https://www.industry.gov.au/fixture/critical-minerals-priorities",
+    "summary": "Australia's critical minerals policy update emphasized midstream processing, offtake resilience, and support for lithium supply chains.",
+    "tags": ["australia", "critical minerals", "policy", "lithium"]
+  },
+  {
+    "title": "Lithium market watches Chinese converter margins",
+    "published_at": "2026-06-28",
+    "source": "S&P Global fixture",
+    "url": "https://www.spglobal.com/fixture/lithium-converter-margins",
+    "summary": "Converters in China reported margin pressure, keeping spot demand cautious despite signs of battery restocking.",
+    "tags": ["china", "lithium", "converter", "price"]
+  },
+  {
+    "title": "Pilgangoora expansion permitting remains a key watch item",
+    "published_at": "2026-06-25",
+    "source": "Mining.com fixture",
+    "url": "https://www.mining.com/fixture/pilgangoora-expansion-permits",
+    "summary": "Analysts flagged permitting, water access, and contractor availability as execution risks for the next Pilgangoora growth phase.",
+    "tags": ["pilbara", "pilgangoora", "risk", "permits"]
+  }
+]

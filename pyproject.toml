@@ -1,0 +1,57 @@
+[project]
+name = "mineral-daily-agent"
+version = "0.1.0"
+description = "MCP-based mineral rights daily briefing agent for interview task #2."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "httpx>=0.27,<1",
+    "mcp>=1.13,<2",
+    "openai>=1.60,<2",
+    "pdfplumber>=0.11,<1",
+    "pydantic>=2.8,<3",
+    "pydantic-settings>=2.4,<3",
+    "python-dotenv>=1.0,<2",
+    "rich>=13.7,<14",
+]
+
+[project.optional-dependencies]
+dev = [
+    "mypy>=1.11,<2",
+    "pytest>=8.3,<9",
+    "pytest-asyncio>=0.24,<1",
+    "respx>=0.21,<1",
+    "ruff>=0.6,<1",
+]
+
+[project.scripts]
+mineral-daily-agent = "mineral_daily_agent.cli:main"
+mining-news-mcp = "mineral_daily_agent.servers.mining_news:main"
+mineral-pdf-mcp = "mineral_daily_agent.servers.mineral_pdf:main"
+lme-price-mcp = "mineral_daily_agent.servers.lme_price:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/mineral_daily_agent"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]
+
+[tool.mypy]
+python_version = "3.11"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+strict_optional = true
+packages = ["mineral_daily_agent"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]

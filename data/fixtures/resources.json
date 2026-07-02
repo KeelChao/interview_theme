@@ -1,0 +1,32 @@
+[
+  {
+    "project": "Pilgangoora",
+    "company": "Pilbara Minerals",
+    "category": "Indicated",
+    "ore_mt": 214.0,
+    "grade": "1.17% Li2O",
+    "metal": "2.50 Mt Li2O contained",
+    "source_url": "https://www.pilbaraminerals.com.au/fixture/pilgangoora-resources.pdf",
+    "source_title": "Pilgangoora Mineral Resource fixture"
+  },
+  {
+    "project": "Pilgangoora",
+    "company": "Pilbara Minerals",
+    "category": "Inferred",
+    "ore_mt": 96.0,
+    "grade": "1.05% Li2O",
+    "metal": "1.01 Mt Li2O contained",
+    "source_url": "https://www.pilbaraminerals.com.au/fixture/pilgangoora-resources.pdf",
+    "source_title": "Pilgangoora Mineral Resource fixture"
+  },
+  {
+    "project": "Super Pit",
+    "company": "Northern Star",
+    "category": "Indicated",
+    "ore_mt": 58.0,
+    "grade": "1.35 g/t Au",
+    "metal": "2.52 Moz Au",
+    "source_url": "https://example.com/fixture/super-pit-resources.pdf",
+    "source_title": "Gold resource comparison fixture"
+  }
+]
