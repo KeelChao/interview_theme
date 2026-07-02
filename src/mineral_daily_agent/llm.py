@@ -1,6 +1,7 @@
 import json
 from typing import Protocol
 
+import httpx
 from openai import OpenAI
 
 from mineral_daily_agent.config import Settings
@@ -22,6 +23,7 @@ class DeepSeekBriefingLLM:
         self._client = OpenAI(
             api_key=settings.deepseek_api_key,
             base_url=settings.deepseek_base_url,
+            http_client=httpx.Client(trust_env=settings.deepseek_trust_env),
         )
 
     def generate(self, evidence: EvidenceBundle) -> str:

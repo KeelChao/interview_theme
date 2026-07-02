@@ -21,6 +21,7 @@ key is configured.
 
    ```env
    DEEPSEEK_API_KEY=your_deepseek_key
+   DEEPSEEK_TRUST_ENV=false
    ```
 
 3. Run the agent:
@@ -47,6 +48,10 @@ The servers use stdio and expose the required tools from the interview prompt.
 ## Troubleshooting
 
 - Missing key: copy `.env.example` to `.env` and set `DEEPSEEK_API_KEY`.
+- Local proxy breaks DeepSeek calls: the app ignores system proxy variables by
+  default (`DEEPSEEK_TRUST_ENV=false`). If your network requires a proxy, set
+  `DEEPSEEK_TRUST_ENV=true` and make sure `HTTP_PROXY` / `HTTPS_PROXY` points
+  to a working proxy.
 - Slow first run: Docker must build the image once. Re-runs use the cache.
 - Base image pull fails: if Docker reports that `python:3.12-slim` cannot be
   pulled and the URL includes a registry mirror such as `docker.m.daocloud.io`
