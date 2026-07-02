@@ -26,11 +26,17 @@ key is configured.
 3. Run the agent:
 
    ```bash
-   docker compose run --rm agent "给我生成一份关于 Pilbara 锂矿的今日简报"
+   docker compose run --rm agent "Generate today's briefing for the Pilbara lithium project"
    ```
 
 Expected output: a Markdown briefing with news summary, resource data, lithium
 price trend, risk notes, and source links.
+
+Chinese prompts are also supported:
+
+```powershell
+docker compose run --rm agent "给我生成一份关于 Pilbara 锂矿的今日简报"
+```
 
 ## MCP Inspector / Host Config
 
@@ -42,5 +48,16 @@ The servers use stdio and expose the required tools from the interview prompt.
 
 - Missing key: copy `.env.example` to `.env` and set `DEEPSEEK_API_KEY`.
 - Slow first run: Docker must build the image once. Re-runs use the cache.
+- Base image pull fails: if Docker reports that `python:3.12-slim` cannot be
+  pulled and the URL includes a registry mirror such as `docker.m.daocloud.io`
+  with `401 Unauthorized`, remove or replace the failing mirror in Docker
+  Desktop Settings -> Docker Engine, apply the change, restart Docker, and
+  retry:
+
+  ```bash
+  docker pull python:3.12-slim
+  docker compose run --rm agent "Generate today's briefing for the Pilbara lithium project"
+  ```
+
 - Network blocked: fixture MCP data still loads, but DeepSeek generation needs
   outbound HTTPS access to `https://api.deepseek.com`.
