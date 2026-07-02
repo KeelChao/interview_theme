@@ -12,6 +12,9 @@ from mineral_daily_agent.mcp_client import MCPToolClient
 
 
 def main() -> None:
+    if hasattr(sys.stdout, "reconfigure"):
+        sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+
     parser = argparse.ArgumentParser(description="Generate a mineral rights daily briefing.")
     parser.add_argument(
         "query",

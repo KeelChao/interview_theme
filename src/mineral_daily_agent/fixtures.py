@@ -9,7 +9,15 @@ def project_root() -> Path:
 
 
 def fixture_path(name: str) -> Path:
-    return project_root() / "data" / "fixtures" / name
+    candidates = [
+        Path.cwd() / "data" / "fixtures" / name,
+        project_root() / "data" / "fixtures" / name,
+    ]
+    for candidate in candidates:
+        if candidate.exists():
+            return candidate
+    searched = ", ".join(str(candidate) for candidate in candidates)
+    raise FileNotFoundError(f"fixture {name} not found; searched: {searched}")
 
 
 @lru_cache

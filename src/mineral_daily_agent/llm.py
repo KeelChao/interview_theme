@@ -34,7 +34,7 @@ class DeepSeekBriefingLLM:
                         "You are a mining analyst agent. Produce concise Chinese Markdown. "
                         "Use only the supplied evidence. If evidence is missing or tool output "
                         "contains an error, say so explicitly and do not invent facts. Include "
-                        "source links in the final references section."
+                        "source links in the final references section. Do not use emoji."
                     ),
                 },
                 {
